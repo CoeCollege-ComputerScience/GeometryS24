@@ -28,4 +28,14 @@ public class Point {
         this.y = y;
     }
 
+    public double distance(Point p){
+        return Math.sqrt((Math.pow((x-p.getX()),2)) + Math.pow((y-p.getY()),2));
+    }
+
+    public void display(){
+        System.out.println("("+x+","+y+")");
+    }
+    public String toString(){
+        return "("+x+","+y+")";
+    }
 }

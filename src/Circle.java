@@ -26,7 +26,7 @@ public class Circle {
             // Negative radius is not supported
             // The program(mer) using this method did something wrong
             // ... let them decide how to handle their mistake.
-            throw new IllegalArgumentException();
+            throw new BadRadiusException();
         }
         else {
             this.radius = radius;
@@ -41,18 +41,23 @@ public class Circle {
         this.center = center;
     }
 
+    public double getCircumference(){
+        return Math.PI * radius * 2;
+    }
 
+    public double getArea(){
+        return Math.PI * radius*radius;
+    }
 
+    public boolean isInside(Point p){
+        return p.distance(center)< radius;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", center=" + center +
+                '}';
+    }
 }
