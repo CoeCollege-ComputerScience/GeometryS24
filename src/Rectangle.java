@@ -97,4 +97,11 @@ public class Rectangle {
             '}';
     }
 
+    public double getArea(){
+        return getWidth() * getHeight();
+    }
+    public double getPerimeter(){
+        return getWidth()* 2 + getHeight()*2;
+    }
+
 }
